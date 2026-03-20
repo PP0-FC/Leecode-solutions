@@ -3,7 +3,7 @@
  * @approach: 选择排序
  * @time_complexity: O(n*n)
  * @space_complexity: O(1)
- * @note: 题目要求时间复杂度位O(nlogn)，冒泡排序不满足，仅作为练习
+ * @note: 题目要求时间复杂度位O(nlogn)，选择排序不满足，仅作为练习
  */
 int* sortArray(int* nums, int numsSize, int* returnSize) 
 {
