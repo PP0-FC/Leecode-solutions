@@ -1,0 +1,39 @@
+/**
+ * @problem: 删除链表的倒数第N个节点
+ * @approach: 同步快慢指针。
+ * @time_complexity: O(n)，其中n是链表中节点的总数。
+ * @space_complexity: O(1)
+ */
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+struct ListNode* removeNthFromEnd(struct ListNode* head, int n) 
+{
+    struct ListNode sentinel;
+    sentinel.next = head;
+
+    struct ListNode* pre = &sentinel;
+    struct ListNode* slow = head;
+    struct ListNode* fast = head;
+    for(int i = 0; i < n; i++)
+    {
+        fast = fast->next;
+    }
+
+    while(fast != 0)
+    {
+        pre = pre->next;
+        slow = slow->next;
+        fast = fast->next;
+    }    
+
+    pre->next = slow->next;
+    free(slow);
+
+    return sentinel.next;
+}
