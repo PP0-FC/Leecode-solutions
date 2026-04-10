@@ -1,7 +1,7 @@
 /**
  * @problem: 两数之和,返回数组下标
  * @approach: 哈希表
- * @time_complexity: O(n^2)
+ * @time_complexity: O(n)
  * @space_complexity: O(1)
  */ 
 
